@@ -12,7 +12,7 @@
     <img src="logo.png">
     <h1>Temukan Karier Impianmu</h1>
     <p>Buat resume profesional, cari pekerjaan, dan kelola aplikasi Anda – semuanya dalam satu platform.</p>
-    <button class="btn-primary">Mulai Sekarang</button>
+    <button type="button" class="btn-primary">Mulai Sekarang</button>
   </header>
 
   <section class="steps">
@@ -54,11 +54,18 @@
   <section class="cta">
     <h2>Wujudkan Masa Depan Profesional Anda</h2>
     <p>Bergabunglah dengan komunitas global pencari kerja dan buka peluang karier yang lebih luas hari ini.</p>
-    <button class="btn-primary">Gabung Gratis</button>
+    <button type="button" class="btn-secondary">Gabung Gratis</button>
   </section>
 
   <footer>
-    <p>&copy; 2025 JobSeekr</p>
+    <p class="footer-text">&copy; 2025 JobSeekr</p>
   </footer>
 </body>
 </html>
+<script>
+  document.querySelector('.btn-primary').addEventListener('click', function() {
+    alert("selamat datang di Jobseekr! Silahkan daftar untuk mulai.");
+  });
+
+  const estDiv = document.createElement("div")
+</script>
