@@ -67,5 +67,29 @@
     alert("selamat datang di Jobseekr! Silahkan daftar untuk mulai.");
   });
 
-  const estDiv = document.createElement("div")
+  const btn = document.querySelector('.btn-secondary');
+  btn.addEventListener('mouseover', () => {
+    btn.innerText = 'Ayo Gabung!';
+  }) ;
+  btn.addEventListener('mouseout', () => {
+    btn.innerText = 'Gabung Gratis';
+  }) ;
+
+  function bikinButton()
+  {
+    const divBaru = document.createElement('div');
+    divBaru.innerHTML = "<button class='btn-secondary'>Klik di sini!</button>";
+    document.querySelector('.cta').append(divBaru);
+
+    
+    const estDiv = document.createElement("div");
+    estDiv.innerHTML = '<button class="btn-primary" id="cekPeluang">Cek</button><p id="hasilPeluang"></P>';
+    document.querySelector(".cta").appendChild(estDiv);
+    document.getElementById("cekPeluang").onclick = () => {
+       const nilai = Math.floor(Math.random() * 51) + 50;
+       document.getElementById("hasilPeluang").innerText = `Peluang anda: ${nilai}%`;
+    }
+  }
+bikinButton();
+
 </script>
